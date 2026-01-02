@@ -11,6 +11,8 @@ console.log(num2);
     num/=10000;
     let decimal='.'+num.toString().split(".")[1];
     console.log(decimal);
+    //formula for the genrating otp using math .random function
+    //math.floor(math.randm()*(max-min)+1)+min
     
     
 
