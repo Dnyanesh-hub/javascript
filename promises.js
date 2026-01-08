@@ -146,22 +146,22 @@ function deliverOrder(orderDetail){
     })
     
 }
-placedOrder(orderDetail)
+// placedOrder(orderDetail)
 
-.then((orderDetail)=>preparingOrder(orderDetail))
-.then((orderDetail)=>pickupOrder(orderDetail))
-.then((orderDetail)=>deliverOrder(orderDetail))
-.then((orderDetail)=>{
-    console.log(orderDetail);
-})
-.catch((error)=>{
-    console.log("Error:",error);
+// .then((orderDetail)=>preparingOrder(orderDetail))
+// .then((orderDetail)=>pickupOrder(orderDetail))
+// .then((orderDetail)=>deliverOrder(orderDetail))
+// .then((orderDetail)=>{
+//     console.log(orderDetail);
+// })
+// .catch((error)=>{
+//     console.log("Error:",error);
 
-})
-.finally(()=>{
-    console.log("I am doing cleanup");
+// })
+// .finally(()=>{
+//     console.log("I am doing cleanup");
 
-})
+// })
 
 
 
@@ -176,3 +176,19 @@ placedOrder(orderDetail)
 //         });
 //     });
 // });
+async function ordering() {
+    try{
+        const response1=await placedOrder(orderDetail);
+    const response2=await preparingOrder(response1);
+     const response3=await pickupOrder(response2);
+      const response4=await deliverOrder(response3);
+      console.log(response4);
+
+    }
+    catch(error){
+        console.log("error:",error);
+
+    }
+    
+    
+}
