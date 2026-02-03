@@ -108,4 +108,4 @@ const obj = {
 const obj2 = Object.create(obj);
 obj2.account = 10;
 
-console.log(obj2.account);
+console.log(obj2.account);   
