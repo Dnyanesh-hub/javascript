@@ -22,6 +22,6 @@ console.log(num2);
 random();
 // generate otp 
 function generate(){
-    console.log(Math.floor(random()*(9999-1000)+1))+1000;
+    console.log(Math.floor(random()*(99999-10000)+1))+1000;
 }
 generate();
